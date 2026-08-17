@@ -92,6 +92,138 @@
   </div>
   <script src="js/main.js"></script>
 
+<!-- Floating Contact Button + Modal -->
+<button id="rtf-chat-btn" aria-label="Contact us">
+  Contact
+</button>
+
+<div id="rtf-chat-overlay"></div>
+
+<div id="rtf-chat-modal">
+  <button id="rtf-chat-close" aria-label="Close">&times;</button>
+  <h3>Get in Touch</h3>
+  <p style="margin-bottom: 1.25rem; font-size: 0.95rem; color: #666;">
+    Questions about our miniature Highlands or a visit? Send us a note.
+  </p>
+  <form action="https://formspree.io/f/moealakk" method="POST">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<style>
+  #rtf-chat-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9998;
+    background: #3d2817;
+    color: #f8f4ee;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 22px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(61, 40, 23, 0.25);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  #rtf-chat-btn:hover {
+    background: #5c3d28;
+    transform: translateY(-2px);
+  }
+
+  #rtf-chat-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 9999;
+  }
+
+  #rtf-chat-modal {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 28px;
+    width: 340px;
+    max-width: calc(100vw - 40px);
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.75rem 1.5rem 1.5rem;
+    z-index: 10000;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  }
+
+  #rtf-chat-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #888;
+    cursor: pointer;
+  }
+  #rtf-chat-close:hover { color: #333; }
+
+  #rtf-chat-modal h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.25rem;
+    color: #3d2817;
+  }
+
+  #rtf-chat-modal input,
+  #rtf-chat-modal textarea {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  #rtf-chat-modal input:focus,
+  #rtf-chat-modal textarea:focus {
+    outline: none;
+    border-color: #3d2817;
+  }
+
+  #rtf-chat-modal button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    background: #3d2817;
+    color: #f8f4ee;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #rtf-chat-modal button[type="submit"]:hover {
+    background: #5c3d28;
+  }
+
+  @media (max-width: 480px) {
+    #rtf-chat-btn {
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 18px;
+    }
+    #rtf-chat-modal {
+      bottom: 80px;
+      right: 16px;
+      left: 16px;
+      width: auto;
+    }
+  }
+</style>
+
 <script>
   (function() {
     const btn = document.getElementById('rtf-chat-btn');
