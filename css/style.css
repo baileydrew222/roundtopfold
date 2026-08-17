@@ -636,3 +636,57 @@ footer .footer-copy {
     right: 18px;
   }
 }
+
+/* Cookie banner + Contact button polish */
+.cookie-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.25rem;
+  padding-right: 120px; /* keeps space for the Contact button on desktop */
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.cookie-decline {
+  min-width: 85px; /* prevents text cutoff */
+}
+
+/* Mobile: stack cleanly and push Contact button above the banner */
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.1rem 1rem 5rem; /* extra bottom space for Contact button */
+  }
+
+  .cookie-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  #rtf-chat-btn {
+    bottom: 22px;
+    right: 18px;
+    z-index: 10001; /* sits above the cookie banner */
+  }
+}
+
+/* Softer, slightly smaller Contact button on mobile */
+@media (max-width: 600px) {
+  #rtf-chat-btn {
+    bottom: 22px;
+    right: 18px;
+    padding: 11px 18px;
+    font-size: 0.9rem;
+    border-radius: 40px;
+    box-shadow: 0 3px 14px rgba(61, 40, 23, 0.22);
+    z-index: 10001;
+  }
+}
