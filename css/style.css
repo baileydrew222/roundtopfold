@@ -522,17 +522,18 @@ footer .footer-copy {
   text-align: center;
 }
 
-/* Rustic wood frame for property photos */
+/* Weathered rustic wood frame for property photos */
 .property-photo {
   width: 100%;
   max-width: 960px;
   margin: 0 auto 1.5rem;
   display: block;
-  border-radius: 2px;
+  border-radius: 1px;
+  border: 4px solid #A67C3D;           /* sun-faded mid wood */
   box-shadow:
-    0 0 0 8px #8B6914,          /* inner wood tone */
-    0 0 0 11px #5C4033,          /* darker wood edge */
-    0 0 0 14px #3D2817,          /* outer dark wood */
-    0 8px 24px rgba(61, 40, 23, 0.25);  /* soft drop shadow */
-  border: 3px solid #C4A35A;     /* lighter wood highlight */
+    0 0 0 3px #6B4A2A,                /* darker weathered ring */
+    0 0 0 7px #4A3220,                /* deep outer wood */
+    0 0 0 10px #2E1F14,               /* almost-black edge */
+    inset 0 0 0 1px rgba(255, 235, 190, 0.25),  /* subtle light highlight */
+    0 10px 28px rgba(30, 18, 8, 0.35);          /* heavy soft shadow */
 }
