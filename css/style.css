@@ -537,3 +537,102 @@ footer .footer-copy {
     inset 0 0 0 1px rgba(255, 235, 190, 0.25),  /* subtle light highlight */
     0 10px 28px rgba(30, 18, 8, 0.35);          /* heavy soft shadow */
 }
+
+/* ===== Mobile Navigation ===== */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #3d2817;
+  margin: 5px 0;
+  transition: 0.25s;
+}
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+  }
+  #main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #f8f4ee;
+    border-top: 1px solid rgba(61,40,23,0.12);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    z-index: 1000;
+  }
+  #main-nav.open {
+    display: block;
+  }
+  #main-nav ul {
+    flex-direction: column;
+    padding: 0.75rem 0;
+    gap: 0;
+  }
+  #main-nav li {
+    width: 100%;
+    text-align: center;
+  }
+  #main-nav a {
+    display: block;
+    padding: 0.85rem 1rem;
+  }
+  .header-inner {
+    position: relative;
+  }
+}
+
+/* ===== Cookie banner + Contact button fix ===== */
+.cookie-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.25rem;
+  padding-right: 110px; /* leave room for Contact button */
+}
+.cookie-buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+.cookie-decline {
+  min-width: 80px; /* prevents "DECLIN" cutoff */
+}
+
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.1rem 1rem 1.3rem;
+    padding-bottom: 4.5rem; /* space for Contact button */
+  }
+  .cookie-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+  #rtf-chat-btn {
+    bottom: 18px;
+    right: 18px;
+  }
+}
