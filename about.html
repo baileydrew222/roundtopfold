@@ -91,5 +91,27 @@
     </div>
   </div>
   <script src="js/main.js"></script>
+
+  <script>
+  (function() {
+    const btn = document.getElementById('rtf-chat-btn');
+    const modal = document.getElementById('rtf-chat-modal');
+    const overlay = document.getElementById('rtf-chat-overlay');
+    const close = document.getElementById('rtf-chat-close');
+
+    function openChat() {
+      modal.style.display = 'block';
+      overlay.style.display = 'block';
+    }
+    function closeChat() {
+      modal.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+
+    btn.addEventListener('click', openChat);
+    close.addEventListener('click', closeChat);
+    overlay.addEventListener('click', closeChat);
+  })();
+</script>
 </body>
 </html>
