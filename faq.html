@@ -345,5 +345,18 @@
     overlay.addEventListener('click', closeChat);
   })();
 </script>
+
+<script>
+  (function() {
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('main-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function() {
+        toggle.classList.toggle('active');
+        nav.classList.toggle('open');
+      });
+    }
+  })();
+</script>
 </body>
 </html>
