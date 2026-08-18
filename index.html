@@ -33,35 +33,32 @@
 </head>
 <body>
   <header>
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <span class="site-title">Round Top Fold</span>
-    </a>
-
-    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav id="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="cattle.html">The Fold</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="local.html">Local</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <span class="site-title">Round Top Fold</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cattle.html">The Fold</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="local.html">Local</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <section class="hero">
-    <!-- Replace with: <img src="images/logo.png" alt="Round Top Fold - Miniature Highland Cattle Round Top Texas" class="hero-logo"> -->
     <img src="images/logo.png" alt="Round Top Fold - Miniature Highland Cattle Round Top Texas" class="hero-logo">
     <h1>Miniature Highland Cattle in Round Top, Texas</h1>
     <p class="tagline">Gentle, quality mini Scottish Highlands — raised with care as both beautiful livestock and wonderful family companions</p>
@@ -75,11 +72,8 @@
     <section>
       <h2>Welcome to Round Top Fold</h2>
       <p class="lead">We raise miniature Highland cattle in the heart of Round Top, Texas — selecting for calm temperament, classic Highland beauty, and the manageable size that makes them ideal for small farms and families.</p>
-      
       <p>Located in Fayette County just outside the historic town of Round Top, our fold focuses on quality over quantity. These mini Highland cows and future calves are bred to be docile, people-friendly animals that retain the iconic long hair and gentle eyes of the Scottish Highland breed while remaining easier to handle than full-size cattle.</p>
-      
       <p>Whether you are looking for highland pets, small-farm livestock, or simply want to experience the charm of miniature Scottish Highlands in Texas, we invite you to learn more about our breeding program. Visitors are welcome once we are established.</p>
-
       <p>Round Top Fold is a member of the American Highland Cattle Association. Our official herd prefix is <strong>Pending</strong>.</p>
     </section>
 
@@ -143,222 +137,208 @@
       <button id="cookie-decline" class="cookie-decline">Decline</button>
     </div>
   </div>
-  <script src="js/main.js"></script>
-</body>
-</html>
-  <script src="js/main.js"></script>
-<!-- Floating Contact Button + Modal -->
-<button id="rtf-chat-btn" aria-label="Contact us">
-  Contact
-</button>
 
-<div id="rtf-chat-overlay"></div>
+  <!-- Floating Contact Button + Modal -->
+  <button id="rtf-chat-btn" aria-label="Contact us">Contact</button>
+  <div id="rtf-chat-overlay"></div>
+  <div id="rtf-chat-modal">
+    <button id="rtf-chat-close" aria-label="Close">&times;</button>
+    <h3>Get in Touch</h3>
+    <p style="margin-bottom: 1.25rem; font-size: 0.95rem; color: #666;">
+      Questions about our miniature Highlands or a visit? Send us a note.
+    </p>
+    <form action="https://formspree.io/f/moealakk" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 
-<div id="rtf-chat-modal">
-  <button id="rtf-chat-close" aria-label="Close">&times;</button>
-  <h3>Get in Touch</h3>
-  <p style="margin-bottom: 1.25rem; font-size: 0.95rem; color: #666;">
-    Questions about our miniature Highlands or a visit? Send us a note.
-  </p>
-  <form action="https://formspree.io/f/moealakk" method="POST">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <textarea name="message" rows="4" placeholder="Your message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</div>
-
-<style>
-  #rtf-chat-btn {
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
-    z-index: 9998;
-    background: #3d2817;
-    color: #f8f4ee;
-    border: none;
-    border-radius: 50px;
-    padding: 14px 22px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    cursor: pointer;
-    box-shadow: 0 4px 18px rgba(61, 40, 23, 0.25);
-    transition: transform 0.15s ease, background 0.15s ease;
-  }
-  #rtf-chat-btn:hover {
-    background: #5c3d28;
-    transform: translateY(-2px);
-  }
-
-  #rtf-chat-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    z-index: 9999;
-  }
-
-  #rtf-chat-modal {
-    display: none;
-    position: fixed;
-    bottom: 90px;
-    right: 28px;
-    width: 340px;
-    max-width: calc(100vw - 40px);
-    background: #fff;
-    border-radius: 10px;
-    padding: 1.75rem 1.5rem 1.5rem;
-    z-index: 10000;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
-  }
-
-  #rtf-chat-close {
-    position: absolute;
-    top: 12px;
-    right: 14px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    line-height: 1;
-    color: #888;
-    cursor: pointer;
-  }
-  #rtf-chat-close:hover { color: #333; }
-
-  #rtf-chat-modal h3 {
-    margin: 0 0 0.4rem;
-    font-size: 1.25rem;
-    color: #3d2817;
-  }
-
-  #rtf-chat-modal input,
-  #rtf-chat-modal textarea {
-    width: 100%;
-    padding: 0.7rem 0.85rem;
-    margin-bottom: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 0.95rem;
-    font-family: inherit;
-    box-sizing: border-box;
-  }
-  #rtf-chat-modal input:focus,
-  #rtf-chat-modal textarea:focus {
-    outline: none;
-    border-color: #3d2817;
-  }
-
-  #rtf-chat-modal button[type="submit"] {
-    width: 100%;
-    padding: 0.8rem;
-    background: #3d2817;
-    color: #f8f4ee;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  #rtf-chat-modal button[type="submit"]:hover {
-    background: #5c3d28;
-  }
-
-  @media (max-width: 480px) {
+  <style>
     #rtf-chat-btn {
-      bottom: 20px;
-      right: 20px;
-      padding: 12px 18px;
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9998;
+      background: #3d2817;
+      color: #f8f4ee;
+      border: none;
+      border-radius: 50px;
+      padding: 14px 22px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(61, 40, 23, 0.25);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    #rtf-chat-btn:hover {
+      background: #5c3d28;
+      transform: translateY(-2px);
+    }
+    #rtf-chat-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 9999;
     }
     #rtf-chat-modal {
-      bottom: 80px;
-      right: 16px;
-      left: 16px;
-      width: auto;
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 28px;
+      width: 340px;
+      max-width: calc(100vw - 40px);
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.75rem 1.5rem 1.5rem;
+      z-index: 10000;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18);
     }
+    #rtf-chat-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: #888;
+      cursor: pointer;
+    }
+    #rtf-chat-close:hover { color: #333; }
+    #rtf-chat-modal h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.25rem;
+      color: #3d2817;
+    }
+    #rtf-chat-modal input,
+    #rtf-chat-modal textarea {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      margin-bottom: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    #rtf-chat-modal input:focus,
+    #rtf-chat-modal textarea:focus {
+      outline: none;
+      border-color: #3d2817;
+    }
+    #rtf-chat-modal button[type="submit"] {
+      width: 100%;
+      padding: 0.8rem;
+      background: #3d2817;
+      color: #f8f4ee;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #rtf-chat-modal button[type="submit"]:hover {
+      background: #5c3d28;
+    }
+    @media (max-width: 480px) {
+      #rtf-chat-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 18px;
+      }
+      #rtf-chat-modal {
+        bottom: 80px;
+        right: 16px;
+        left: 16px;
+        width: auto;
+      }
+    }
+  </style>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    (function() {
+      const btn = document.getElementById('rtf-chat-btn');
+      const modal = document.getElementById('rtf-chat-modal');
+      const overlay = document.getElementById('rtf-chat-overlay');
+      const close = document.getElementById('rtf-chat-close');
+      function openChat() {
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+      }
+      function closeChat() {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+      }
+      if (btn) btn.addEventListener('click', openChat);
+      if (close) close.addEventListener('click', closeChat);
+      if (overlay) overlay.addEventListener('click', closeChat);
+    })();
+  </script>
+
+  <script>
+    (function() {
+      const toggle = document.getElementById('nav-toggle');
+      const nav = document.getElementById('main-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+          toggle.classList.toggle('active');
+          nav.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Round Top Fold",
+    "url": "https://roundtopfold.com",
+    "logo": "https://roundtopfold.com/images/logo.png",
+    "description": "Miniature Highland cattle in Round Top, Texas — gentle, quality mini Scottish Highlands raised as livestock and family companions.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "620 FM 1291",
+      "addressLocality": "Round Top",
+      "addressRegion": "TX",
+      "postalCode": "78954",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://instagram.com/roundtopfold",
+      "https://x.com/roundtopfold"
+    ]
   }
-</style>
-
-<script>
-  (function() {
-    const btn = document.getElementById('rtf-chat-btn');
-    const modal = document.getElementById('rtf-chat-modal');
-    const overlay = document.getElementById('rtf-chat-overlay');
-    const close = document.getElementById('rtf-chat-close');
-
-    function openChat() {
-      modal.style.display = 'block';
-      overlay.style.display = 'block';
-    }
-    function closeChat() {
-      modal.style.display = 'none';
-      overlay.style.display = 'none';
-    }
-
-    btn.addEventListener('click', openChat);
-    close.addEventListener('click', closeChat);
-    overlay.addEventListener('click', closeChat);
-  })();
-</script>
-
-<script>
-  (function() {
-    const toggle = document.getElementById('nav-toggle');
-    const nav = document.getElementById('main-nav');
-    if (toggle && nav) {
-      toggle.addEventListener('click', function() {
-        toggle.classList.toggle('active');
-        nav.classList.toggle('open');
-      });
-    }
-  })();
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Round Top Fold",
-  "url": "https://roundtopfold.com",
-  "logo": "https://roundtopfold.com/images/logo.png",
-  "description": "Miniature Highland cattle in Round Top, Texas — gentle, quality mini Scottish Highlands raised as livestock and family companions.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "620 FM 1291",
-    "addressLocality": "Round Top",
-    "addressRegion": "TX",
-    "postalCode": "78954",
-    "addressCountry": "US"
-  },
-  "sameAs": [
-    "https://instagram.com/roundtopfold",
-    "https://x.com/roundtopfold"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Round Top Fold",
-  "image": "https://roundtopfold.com/images/og-image.jpg",
-  "url": "https://roundtopfold.com",
-  "email": "drew@roundtopfold.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "620 FM 1291",
-    "addressLocality": "Round Top",
-    "addressRegion": "TX",
-    "postalCode": "78954",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 30.0607,
-    "longitude": -96.6980
-  },
-  "description": "Breeders of miniature Highland cattle in Round Top, Texas."
-}
-</script>
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Round Top Fold",
+    "image": "https://roundtopfold.com/images/og-image.jpg",
+    "url": "https://roundtopfold.com",
+    "email": "drew@roundtopfold.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "620 FM 1291",
+      "addressLocality": "Round Top",
+      "addressRegion": "TX",
+      "postalCode": "78954",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 30.0607,
+      "longitude": -96.6980
+    },
+    "description": "Breeders of miniature Highland cattle in Round Top, Texas."
+  }
+  </script>
 </body>
 </html>
