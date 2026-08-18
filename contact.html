@@ -11,7 +11,6 @@
   <meta name="description" content="Contact Round Top Fold to inquire about future miniature Highland calves, arrange a visit during the Round Top Antique Shows, or learn more about our mini Highland cattle in Texas.">
   <meta name="keywords" content="contact round top fold, visit highland cattle round top, mini highland cattle texas, buy mini highland calves, round top tx cattle">
   <meta name="robots" content="index, follow">
-
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://roundtopfold.com/contact.html">
@@ -21,13 +20,11 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
-
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact Round Top Fold | Visit Miniature Highlands in Round Top, TX">
   <meta name="twitter:description" content="Inquire about future miniature Highland calves, arrange a visit, or learn more about our mini Highlands in Round Top, Texas.">
   <meta name="twitter:image" content="https://roundtopfold.com/images/og-image.jpg">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -36,13 +33,11 @@
     <a href="index.html" class="logo-link">
       <span class="site-title">Round Top Fold</span>
     </a>
-
     <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
-
     <nav id="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -53,17 +48,15 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="local.html">Local</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </div>
   </header>
-
   <main>
     <section>
       <h2>Contact Us</h2>
       <p class="lead">We would love to hear from you — whether you are interested in future miniature Highland calves, would like to visit once we are established, or simply want to learn more about the fold.</p>
-
       <div class="contact-grid">
         <div class="contact-info">
           <h3>Visit</h3>
@@ -73,14 +66,12 @@
             </a>
           </p>
           <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-            <a href="https://www.google.com/maps/search/?api=1&query=620+Farm+to+Market+rd+1291+Round+Top+TX+78954" target="_blank" rel="noopener">Google Maps</a> · 
+            <a href="https://www.google.com/maps/search/?api=1&query=620+Farm+to+Market+rd+1291+Round+Top+TX+78954" target="_blank" rel="noopener">Google Maps</a> ·
             <a href="https://maps.apple.com/?q=620+FM+1291+Round+Top+TX+78954" target="_blank" rel="noopener">Apple Maps</a>
           </p>
           <p style="margin-top: 0.75rem;">Visitors are welcome once we are established. Please contact us ahead of time so we can arrange to meet you and introduce you to our miniature Highland cattle.</p>
-
           <h3 style="margin-top: 2rem;">Email</h3>
           <p><a href="mailto:drew@roundtopfold.com">drew@roundtopfold.com</a></p>
-
           <div class="social-links">
             <h3>Follow</h3>
             <p style="margin: 0.4rem 0;">
@@ -97,36 +88,31 @@
             </p>
           </div>
         </div>
-
         <div>
-          <form action="https://formspree.io/f/moealakk" method="POST">
+          <form id="rtf-contact-form" action="https://formspree.io/f/moealakk" method="POST">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required>
             </div>
-
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" required>
             </div>
-
             <div class="form-group">
               <label for="subject">Subject</label>
               <input type="text" id="subject" name="subject" placeholder="Visit request, calf inquiry, etc.">
             </div>
-
             <div class="form-group">
               <label for="message">Message</label>
               <textarea id="message" name="message" required></textarea>
             </div>
-
-            <button type="submit" class="btn btn-outline">Send Message</button>
+            <button type="submit" class="btn btn-outline" id="rtf-submit-btn">Send Message</button>
+            <p id="rtf-form-status" style="display:none; margin-top:1rem; font-size:0.95rem; line-height:1.5;"></p>
           </form>
         </div>
       </div>
     </section>
   </main>
-
   <footer>
     <div class="footer-brand">Round Top Fold</div>
     <div class="footer-address">
@@ -150,7 +136,6 @@
       <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Disclaimers</a>
     </div>
   </footer>
-
   <div id="cookie-banner" class="cookie-banner" style="display: none;">
     <p>We use cookies to ensure the site functions properly and to understand how visitors use our website. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
     <div class="cookie-buttons">
@@ -159,49 +144,85 @@
     </div>
   </div>
   <script src="js/main.js"></script>
+  <script>
+    (function() {
+      const toggle = document.getElementById('nav-toggle');
+      const nav = document.getElementById('main-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+          toggle.classList.toggle('active');
+          nav.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
+  <script>
+    (function() {
+      const form = document.getElementById('rtf-contact-form');
+      const status = document.getElementById('rtf-form-status');
+      const submitBtn = document.getElementById('rtf-submit-btn');
+      if (!form || !status) return;
 
-<script>
-  (function() {
-    const toggle = document.getElementById('nav-toggle');
-    const nav = document.getElementById('main-nav');
-    if (toggle && nav) {
-      toggle.addEventListener('click', function() {
-        toggle.classList.toggle('active');
-        nav.classList.toggle('open');
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        status.style.display = 'block';
+        status.style.color = '#3d2817';
+        status.textContent = 'Sending…';
+        if (submitBtn) submitBtn.disabled = true;
+
+        try {
+          const data = new FormData(form);
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            form.reset();
+            status.textContent = 'Thank you — your message was sent. We’ll respond shortly.';
+            status.style.color = '#3d2817';
+          } else {
+            status.textContent = 'Something went wrong. Please email drew@roundtopfold.com.';
+            status.style.color = '#8b3a2a';
+          }
+        } catch (err) {
+          status.textContent = 'Something went wrong. Please email drew@roundtopfold.com.';
+          status.style.color = '#8b3a2a';
+        }
+
+        if (submitBtn) submitBtn.disabled = false;
       });
-    }
-  })();
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact Round Top Fold",
-  "url": "https://roundtopfold.com/contact.html",
-  "description": "Contact Round Top Fold to inquire about future miniature Highland calves or arrange a visit."
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://roundtopfold.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Contact",
-      "item": "https://roundtopfold.com/contact.html"
-    }
-  ]
-}
-</script>
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Round Top Fold",
+    "url": "https://roundtopfold.com/contact.html",
+    "description": "Contact Round Top Fold to inquire about future miniature Highland calves or arrange a visit."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://roundtopfold.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://roundtopfold.com/contact.html"
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
