@@ -26,6 +26,30 @@
   <meta name="twitter:description" content="The story of Round Top Fold — how we chose gentle miniature Highland cattle for our Round Top, Texas property.">
   <meta name="twitter:image" content="https://roundtopfold.com/images/og-image.jpg">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .story-photo {
+      width: 100%;
+      max-width: 720px;
+      margin: 1.75rem auto 0.5rem;
+      display: block;
+      border-radius: 1px;
+      border: 4px solid #A67C3D;
+      box-shadow:
+        0 0 0 3px #6B4A2A,
+        0 0 0 7px #4A3220,
+        0 0 0 10px #2E1F14,
+        inset 0 0 0 1px rgba(255, 235, 190, 0.25),
+        0 10px 28px rgba(30, 18, 8, 0.35);
+    }
+    .story-caption {
+      text-align: center;
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0.35rem auto 2rem;
+      max-width: 720px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -59,8 +83,30 @@
       <div class="story">
         <p>When we decided to build our home in Round Top, Texas, we knew we wanted cattle on the land. There is something grounding about having animals that belong to a place — animals that slow you down and connect you to the rhythm of the seasons in the Texas countryside.</p>
         <p>At the same time, we were honest with ourselves. We are not getting any younger, and the idea of managing large, high-maintenance cattle did not feel realistic for the long term. We wanted animals that were still unmistakably “cattle,” but that we could handle comfortably and enjoy without constant heavy labor.</p>
+
+        <img
+          src="images/land-entry-4.28.26.jpg"
+          alt="Entry gate at Round Top Fold on FM 1291 in Round Top, Texas"
+          class="story-photo"
+          width="1200"
+          height="800"
+          loading="lazy"
+        >
+        <p class="story-caption">The entry to our place on FM 1291 — Round Top, Texas</p>
+
         <p>That is when we discovered miniature Scottish Highland cattle. They have the iconic long, flowing hair, the gentle eyes, and the classic Highland presence — yet they are significantly smaller, easier to work with, and known for their exceptionally docile temperaments. These mini Highland cows felt like the perfect fit from the very beginning — ideal both as beautiful livestock and as true highland pets for families.</p>
         <p>Round Top Fold is the result of that decision. We are building a small herd of miniature Highland cattle with intention: selecting for calm disposition, sound structure, and the classic Highland look, while using artificial insemination to bring in the best available genetics. Our goal is a consistent and small group of cows that produce quality calves with the kind of gentle nature that makes them a true pleasure to own.</p>
+
+        <img
+          src="images/land-pasture-10.15.25.jpg"
+          alt="Open pasture at Round Top Fold in Fayette County, Texas"
+          class="story-photo"
+          width="1200"
+          height="800"
+          loading="lazy"
+        >
+        <p class="story-caption">Open pasture on the property — room for a small, carefully tended fold</p>
+
         <p>Round Top Fold is a member of the American Highland Cattle Association. Our official herd prefix is <strong>Pending</strong>.</p>
         <p>This is not a large commercial operation. It is a carefully tended fold of mini Highlands on land we love, in a community we are proud to call home in Round Top, Texas. We look forward to sharing it with others as the herd grows.</p>
       </div>
@@ -239,7 +285,6 @@
     const form = document.getElementById('rtf-contact-form');
     const status = document.getElementById('rtf-form-status');
     const submitBtn = document.getElementById('rtf-submit-btn');
-
     function openChat() {
       if (modal) modal.style.display = 'block';
       if (overlay) overlay.style.display = 'block';
@@ -248,11 +293,9 @@
       if (modal) modal.style.display = 'none';
       if (overlay) overlay.style.display = 'none';
     }
-
     if (btn) btn.addEventListener('click', openChat);
     if (close) close.addEventListener('click', closeChat);
     if (overlay) overlay.addEventListener('click', closeChat);
-
     if (form && status) {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -260,7 +303,6 @@
         status.style.color = '#3d2817';
         status.textContent = 'Sending…';
         if (submitBtn) submitBtn.disabled = true;
-
         try {
           const data = new FormData(form);
           const res = await fetch(form.action, {
@@ -268,7 +310,6 @@
             body: data,
             headers: { 'Accept': 'application/json' }
           });
-
           if (res.ok) {
             form.reset();
             status.textContent = 'Thank you — your message was sent. We’ll respond shortly.';
@@ -281,7 +322,6 @@
           status.textContent = 'Something went wrong. Please email drew@roundtopfold.com.';
           status.style.color = '#8b3a2a';
         }
-
         if (submitBtn) submitBtn.disabled = false;
       });
     }
