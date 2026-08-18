@@ -11,7 +11,6 @@
   <meta name="description" content="Breeding philosophy at Round Top Fold — quality miniature Highland cattle selected for gentle disposition, polled genetics, and classic Highland character. Mini Highland cows and future calves in Round Top, TX.">
   <meta name="keywords" content="miniature highland cattle for sale, mini highland calves, polled highland cattle, gentle highland cattle, highland cattle breeding, mini cows texas, round top cattle, ai highland cattle">
   <meta name="robots" content="index, follow">
-
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://roundtopfold.com/cattle.html">
@@ -21,14 +20,49 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
-
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Our Cattle | Miniature Highland Breeding Program | Round Top Fold">
   <meta name="twitter:description" content="Quality miniature Highland cattle selected for gentle disposition, polled genetics, and classic Highland character in Round Top, TX.">
   <meta name="twitter:image" content="https://roundtopfold.com/images/og-image.jpg">
-
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .story-photo {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      margin: 1.75rem auto 0.5rem;
+      display: block;
+      border-radius: 1px;
+      border: 4px solid #A67C3D;
+      box-sizing: border-box;
+      box-shadow:
+        0 0 0 3px #6B4A2A,
+        0 0 0 7px #4A3220,
+        0 0 0 10px #2E1F14,
+        inset 0 0 0 1px rgba(255, 235, 190, 0.25),
+        0 10px 28px rgba(30, 18, 8, 0.35);
+    }
+    .story-caption {
+      text-align: center;
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0.35rem auto 2rem;
+      max-width: 720px;
+      padding: 0 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .story-photo {
+        border-width: 3px;
+        box-shadow:
+          0 0 0 2px #6B4A2A,
+          0 0 0 5px #4A3220,
+          0 0 0 7px #2E1F14,
+          0 6px 18px rgba(30, 18, 8, 0.3);
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -36,18 +70,16 @@
     <a href="index.html" class="logo-link">
       <span class="site-title">Round Top Fold</span>
     </a>
-
     <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
-
     <nav id="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="cattle.html">The Fold</a></li>
+        <li><a href="cattle.html" class="active">The Fold</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -64,6 +96,16 @@
       <h2>The Fold</h2>
       <p class="lead">We are building a foundation herd of miniature Scottish Highland cattle with a clear focus on temperament, structure, and lasting quality — perfect for those seeking mini Highland cows, highland pets, or small-farm livestock in Texas.</p>
 
+      <img
+        src="images/land-pond-11.2.25.jpg"
+        alt="Pond and pasture at Round Top Fold in Fayette County, Texas"
+        class="story-photo"
+        width="1200"
+        height="800"
+        loading="lazy"
+      >
+      <p class="story-caption">Pond and open ground on the property — home for a small fold</p>
+
       <div class="philosophy">
         <h3>Breeding Philosophy</h3>
         <ul>
@@ -74,6 +116,16 @@
           <li><strong>Polled preference.</strong> We aim to produce naturally polled (hornless) mini Highlands while preserving the classic Highland look and long, flowing hair coat.</li>
         </ul>
       </div>
+
+      <img
+        src="images/land-deer-1.13.26.jpg"
+        alt="Wildlife on the Round Top Fold property in Round Top, Texas"
+        class="story-photo"
+        width="1200"
+        height="800"
+        loading="lazy"
+      >
+      <p class="story-caption">Wildlife already shares this land — we aim to keep the place in balance as the fold grows</p>
 
       <p>Round Top Fold is a member of the American Highland Cattle Association. Our official herd prefix is <strong>Pending</strong>.</p>
 
@@ -110,7 +162,6 @@
       <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Disclaimers</a>
     </div>
   </footer>
-
   <div id="cookie-banner" class="cookie-banner" style="display: none;">
     <p>We use essential cookies so the site works properly (including remembering your cookie preference). We do not use advertising or marketing trackers. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
     <div class="cookie-buttons">
@@ -120,13 +171,8 @@
   </div>
   <script src="js/main.js"></script>
 
-<!-- Floating Contact Button + Modal -->
-<button id="rtf-chat-btn" aria-label="Contact us">
-  Contact
-</button>
-
+<button id="rtf-chat-btn" aria-label="Contact us">Contact</button>
 <div id="rtf-chat-overlay"></div>
-
 <div id="rtf-chat-modal">
   <button id="rtf-chat-close" aria-label="Close">&times;</button>
   <h3>Get in Touch</h3>
@@ -134,16 +180,15 @@
     Questions about our miniature Highlands or a visit? Send us a note.
   </p>
   <form id="rtf-contact-form" action="https://formspree.io/f/moealakk" method="POST">
-  <input type="text" name="name" placeholder="Your name" required>
-  <input type="email" name="email" placeholder="Your email" required>
-  <textarea name="message" rows="4" placeholder="Your message" required></textarea>
-  <input type="text" name="_gotcha" value="" style="display:none" tabindex="-1" autocomplete="off">
-  <button type="submit">Send Message</button>
-  <p style="margin-top:0.75rem; font-size:0.8rem; color:#666; line-height:1.4;">We only use your email to reply to this message. We do not sell or share your information, and we will not add you to a mailing list.</p>
-  <p id="rtf-form-status" style="display:none; margin-top:0.75rem; font-size:0.9rem; color:#3d2817;"></p>
-</form>
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+    <input type="text" name="_gotcha" value="" style="display:none" tabindex="-1" autocomplete="off">
+    <button type="submit">Send Message</button>
+    <p style="margin-top:0.75rem; font-size:0.8rem; color:#666; line-height:1.4;">We only use your email to reply to this message. We do not sell or share your information, and we will not add you to a mailing list.</p>
+    <p id="rtf-form-status" style="display:none; margin-top:0.75rem; font-size:0.9rem; color:#3d2817;"></p>
+  </form>
 </div>
-
 <style>
   #rtf-chat-btn {
     position: fixed;
@@ -166,7 +211,6 @@
     background: #5c3d28;
     transform: translateY(-2px);
   }
-
   #rtf-chat-overlay {
     display: none;
     position: fixed;
@@ -174,7 +218,6 @@
     background: rgba(0,0,0,0.45);
     z-index: 9999;
   }
-
   #rtf-chat-modal {
     display: none;
     position: fixed;
@@ -188,7 +231,6 @@
     z-index: 10000;
     box-shadow: 0 12px 40px rgba(0,0,0,0.18);
   }
-
   #rtf-chat-close {
     position: absolute;
     top: 12px;
@@ -201,13 +243,11 @@
     cursor: pointer;
   }
   #rtf-chat-close:hover { color: #333; }
-
   #rtf-chat-modal h3 {
     margin: 0 0 0.4rem;
     font-size: 1.25rem;
     color: #3d2817;
   }
-
   #rtf-chat-modal input,
   #rtf-chat-modal textarea {
     width: 100%;
@@ -224,7 +264,6 @@
     outline: none;
     border-color: #3d2817;
   }
-
   #rtf-chat-modal button[type="submit"] {
     width: 100%;
     padding: 0.8rem;
@@ -239,7 +278,6 @@
   #rtf-chat-modal button[type="submit"]:hover {
     background: #5c3d28;
   }
-
   @media (max-width: 480px) {
     #rtf-chat-btn {
       bottom: 20px;
@@ -254,7 +292,6 @@
     }
   }
 </style>
-
 <script>
   (function() {
     const btn = document.getElementById('rtf-chat-btn');
@@ -263,7 +300,6 @@
     const close = document.getElementById('rtf-chat-close');
     const form = document.getElementById('rtf-contact-form');
     const status = document.getElementById('rtf-form-status');
-
     function openChat() {
       if (modal) modal.style.display = 'block';
       if (overlay) overlay.style.display = 'block';
@@ -272,18 +308,15 @@
       if (modal) modal.style.display = 'none';
       if (overlay) overlay.style.display = 'none';
     }
-
     if (btn) btn.addEventListener('click', openChat);
     if (close) close.addEventListener('click', closeChat);
     if (overlay) overlay.addEventListener('click', closeChat);
-
     if (form) {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
         status.style.display = 'block';
         status.style.color = '#3d2817';
         status.textContent = 'Sending…';
-
         try {
           const data = new FormData(form);
           const res = await fetch(form.action, {
@@ -291,7 +324,6 @@
             body: data,
             headers: { 'Accept': 'application/json' }
           });
-
           if (res.ok) {
             form.reset();
             status.textContent = 'Thank you — your message was sent. We’ll respond shortly.';
@@ -308,7 +340,6 @@
     }
   })();
 </script>
-
 <script>
   (function() {
     const toggle = document.getElementById('nav-toggle');
@@ -321,7 +352,6 @@
     }
   })();
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
