@@ -12,7 +12,6 @@
   <meta name="keywords" content="miniature highland cattle, mini highland cattle, mini highland cows, highland cattle for sale, round top texas cattle, round top tx, miniature scottish highland, highland calves, polled highland cattle, gentle highland cattle, mini cows texas, highland pets, family friendly cattle, small farm cattle texas, fayette county cattle">
   <meta name="author" content="Round Top Fold">
   <meta name="robots" content="index, follow">
-
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://roundtopfold.com/">
@@ -22,14 +21,59 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
-
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Round Top Fold | Miniature Highland Cattle in Round Top, Texas">
   <meta name="twitter:description" content="Quality miniature Scottish Highland cattle with gentle dispositions. Building a small fold of polled mini Highlands in Round Top, TX.">
   <meta name="twitter:image" content="https://roundtopfold.com/images/og-image.jpg">
-
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Hero photo with same weathered wood frame as property photos */
+    .hero {
+      background: linear-gradient(to bottom, var(--white), var(--cream));
+      text-align: center;
+      padding: 2.5rem 1.5rem 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-photo {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto 1.75rem;
+      display: block;
+      border-radius: 1px;
+      border: 4px solid #A67C3D;
+      box-shadow:
+        0 0 0 3px #6B4A2A,
+        0 0 0 7px #4A3220,
+        0 0 0 10px #2E1F14,
+        inset 0 0 0 1px rgba(255, 235, 190, 0.25),
+        0 10px 28px rgba(30, 18, 8, 0.35);
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero .tagline {
+      font-size: 1.15rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 600px) {
+      .hero {
+        padding: 1.5rem 1rem 2.5rem;
+      }
+      .hero h1 {
+        font-size: 1.65rem;
+      }
+      .hero-photo {
+        margin-bottom: 1.25rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -59,7 +103,13 @@
   </header>
 
   <section class="hero">
-    <img src="images/logo.png" alt="Round Top Fold - Miniature Highland Cattle Round Top Texas" class="hero-logo">
+    <img
+      src="images/hero-house.jpg"
+      alt="Round Top Fold — custom home and fold in Round Top, Texas"
+      class="hero-photo"
+      width="2448"
+      height="816"
+    >
     <h1>Miniature Highland Cattle in Round Top, Texas</h1>
     <p class="tagline">Gentle, quality mini Scottish Highlands — raised with care as both beautiful livestock and wonderful family companions</p>
     <div>
@@ -76,12 +126,10 @@
       <p>Whether you are looking for highland pets, small-farm livestock, or simply want to experience the charm of miniature Scottish Highlands in Texas, we invite you to learn more about our breeding program. Visitors are welcome once we are established.</p>
       <p>Round Top Fold is a member of the American Highland Cattle Association. Our official herd prefix is <strong>Pending</strong>.</p>
     </section>
-
     <section class="property-section">
       <img src="images/pond.jpg" alt="Pond and open pasture on the Round Top Fold property in Fayette County, Texas" class="property-photo">
       <p class="property-caption">Twenty acres with our home and open pasture in Fayette County — Round Top Fold</p>
     </section>
-
     <section>
       <div class="features">
         <div class="feature-card">
@@ -98,7 +146,6 @@
         </div>
       </div>
     </section>
-
     <section style="text-align: center; margin-top: 3rem;">
       <h2>Visit Us in Round Top</h2>
       <p class="lead">Once established, we will welcome visitors who would like to meet our miniature Highland cattle and see the fold. Perfect for those interested in mini cows, highland calves, or simply experiencing these wonderful animals in person.</p>
@@ -129,7 +176,6 @@
       <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Disclaimers</a>
     </div>
   </footer>
-
   <div id="cookie-banner" class="cookie-banner" style="display: none;">
     <p>We use essential cookies so the site works properly (including remembering your cookie preference). We do not use advertising or marketing trackers. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
     <div class="cookie-buttons">
@@ -137,7 +183,6 @@
       <button id="cookie-decline" class="cookie-decline">Decline</button>
     </div>
   </div>
-
   <!-- Floating Contact Button + Modal -->
   <button id="rtf-chat-btn" aria-label="Contact us">Contact</button>
   <div id="rtf-chat-overlay"></div>
@@ -157,7 +202,6 @@
   <p id="rtf-form-status" style="display:none; margin-top:0.75rem; font-size:0.9rem; color:#3d2817;"></p>
 </form>
   </div>
-
   <style>
     #rtf-chat-btn {
       position: fixed;
@@ -261,9 +305,7 @@
       }
     }
   </style>
-
   <script src="js/main.js"></script>
-
   <script>
   (function() {
     const btn = document.getElementById('rtf-chat-btn');
@@ -272,7 +314,6 @@
     const close = document.getElementById('rtf-chat-close');
     const form = document.getElementById('rtf-contact-form');
     const status = document.getElementById('rtf-form-status');
-
     function openChat() {
       if (modal) modal.style.display = 'block';
       if (overlay) overlay.style.display = 'block';
@@ -281,18 +322,15 @@
       if (modal) modal.style.display = 'none';
       if (overlay) overlay.style.display = 'none';
     }
-
     if (btn) btn.addEventListener('click', openChat);
     if (close) close.addEventListener('click', closeChat);
     if (overlay) overlay.addEventListener('click', closeChat);
-
     if (form) {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
         status.style.display = 'block';
         status.style.color = '#3d2817';
         status.textContent = 'Sending…';
-
         try {
           const data = new FormData(form);
           const res = await fetch(form.action, {
@@ -300,7 +338,6 @@
             body: data,
             headers: { 'Accept': 'application/json' }
           });
-
           if (res.ok) {
             form.reset();
             status.textContent = 'Thank you — your message was sent. We’ll respond shortly.';
@@ -329,7 +366,6 @@
       }
     })();
   </script>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
