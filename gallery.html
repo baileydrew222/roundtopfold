@@ -94,6 +94,25 @@
       .gallery-item img { height: 200px; }
       .gallery-grid.wide .gallery-item:first-child img { height: 240px; }
     }
+
+    /* GLightbox – Round Top Fold theme */
+    .glightbox-clean .gslide-description {
+      background: #3d2817;
+      color: #f8f4ee;
+    }
+    .glightbox-clean .gslide-title {
+      color: #f8f4ee;
+    }
+    .glightbox-clean .gclose,
+    .glightbox-clean .gnext,
+    .glightbox-clean .gprev {
+      background: rgba(61, 40, 23, 0.85);
+    }
+    .glightbox-clean .gclose:hover,
+    .glightbox-clean .gnext:hover,
+    .glightbox-clean .gprev:hover {
+      background: rgba(92, 61, 40, 0.95);
+    }
   </style>
 </head>
 <body>
@@ -141,7 +160,7 @@
             </a>
             <figcaption>
               <strong>The finished vision</strong>
-              Architectural rendering of the home for Drew &amp; Lindsay Henderson — the heart of Round Top Fold.
+              Architectural rendering of the home — the heart of Round Top Fold.
             </figcaption>
           </figure>
         </div>
@@ -737,8 +756,15 @@
     const lightbox = GLightbox({
       selector: '.glightbox',
       touchNavigation: true,
+      keyboardNavigation: true,
       loop: true,
-      closeButton: true
+      closeButton: true,
+      closeOnOutsideClick: true,
+      openEffect: 'zoom',
+      closeEffect: 'zoom',
+      slideEffect: 'slide',
+      zoomable: true,
+      draggable: true
     });
   </script>
   <script>
@@ -794,4 +820,3 @@
   </script>
 </body>
 </html>
-
