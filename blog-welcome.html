@@ -10,7 +10,6 @@
   <title>Welcome to Round Top Fold | Blog</title>
   <meta name="description" content="An introduction to Round Top Fold — our decision to raise miniature Highland cattle in Round Top, Texas, and what this blog will share as the herd grows.">
   <meta name="robots" content="index, follow">
-
   <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://roundtopfold.com/blog-welcome.html">
@@ -20,13 +19,11 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
-
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Welcome to Round Top Fold | Blog">
   <meta name="twitter:description" content="An introduction to Round Top Fold — our decision to raise miniature Highland cattle in Round Top, Texas, and what this blog will share as the herd grows.">
   <meta name="twitter:image" content="https://roundtopfold.com/images/og-image.jpg">
-
   <link rel="stylesheet" href="css/style.css">
   <style>
     .post { max-width: 680px; margin: 0 auto; }
@@ -41,19 +38,17 @@
     <a href="index.html" class="logo-link">
       <span class="site-title">Round Top Fold</span>
     </a>
-
     <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
-
     <nav id="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="cattle.html">The Fold</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="local.html">Local</a></li>
@@ -63,30 +58,21 @@
     </nav>
   </div>
   </header>
-
   <main>
     <div class="post">
       <a href="blog.html" class="back-link">← Back to Blog</a>
-      
+     
       <h2>Welcome to Round Top Fold</h2>
       <div class="post-meta">August 13, 2026</div>
-
       <p>We’re just getting started.</p>
-
       <p>When we decided to build in Round Top, we knew we wanted cattle on the land. We also knew we needed animals that fit the season of life we’re in — something manageable, beautiful, and genuinely enjoyable to work with. That search led us to miniature Scottish Highlands.</p>
-
       <p>These cattle carry the classic Highland look: the long, flowing hair, the quiet eyes, the sturdy presence. But they come in a smaller package that makes daily care more realistic. Their reputation for calm, docile temperaments sealed the decision. They felt like the right fit.</p>
-
       <p>Round Top Fold is a small, intentional project. We’re aiming for a herd of roughly ten cows, using artificial insemination to bring in strong genetics, and selecting for gentle disposition and polled (naturally hornless) animals whenever we can. Quality over quantity.</p>
-
       <p>This blog will be a simple record of the journey — the decisions, the learning curve, the first calves when they arrive, and life on the place. We’ll also share practical notes that might help others who are considering mini Highlands or small-scale cattle in Texas.</p>
-
       <p>If you’re interested in future calves, want to visit during the antique shows, or just enjoy following along, you’re welcome here. Thank you for stopping by.</p>
-
       <p>— Drew</p>
     </div>
   </main>
-
   <footer>
     <div class="footer-brand">Round Top Fold</div>
     <div class="footer-address">
@@ -110,7 +96,6 @@
       <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Disclaimers</a>
     </div>
   </footer>
-
   <div id="cookie-banner" class="cookie-banner" style="display: none;">
     <p>We use cookies to ensure the site functions properly and to understand how visitors use our website. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
     <div class="cookie-buttons">
@@ -119,28 +104,25 @@
     </div>
   </div>
   <script src="js/main.js"></script>
-
 <!-- Floating Contact Button + Modal -->
 <button id="rtf-chat-btn" aria-label="Contact us">
   Contact
 </button>
-
 <div id="rtf-chat-overlay"></div>
-
 <div id="rtf-chat-modal">
   <button id="rtf-chat-close" aria-label="Close">&times;</button>
   <h3>Get in Touch</h3>
   <p style="margin-bottom: 1.25rem; font-size: 0.95rem; color: #666;">
     Questions about our miniature Highlands or a visit? Send us a note.
   </p>
-  <form action="https://formspree.io/f/moealakk" method="POST">
+  <form id="rtf-contact-form" action="https://formspree.io/f/moealakk" method="POST">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Your email" required>
     <textarea name="message" rows="4" placeholder="Your message" required></textarea>
-    <button type="submit">Send Message</button>
+    <button type="submit" id="rtf-submit-btn">Send Message</button>
+    <p id="rtf-form-status" style="display:none; margin-top:0.75rem; font-size:0.9rem; line-height:1.45;"></p>
   </form>
 </div>
-
 <style>
   #rtf-chat-btn {
     position: fixed;
@@ -163,7 +145,6 @@
     background: #5c3d28;
     transform: translateY(-2px);
   }
-
   #rtf-chat-overlay {
     display: none;
     position: fixed;
@@ -171,7 +152,6 @@
     background: rgba(0,0,0,0.45);
     z-index: 9999;
   }
-
   #rtf-chat-modal {
     display: none;
     position: fixed;
@@ -185,7 +165,6 @@
     z-index: 10000;
     box-shadow: 0 12px 40px rgba(0,0,0,0.18);
   }
-
   #rtf-chat-close {
     position: absolute;
     top: 12px;
@@ -198,13 +177,11 @@
     cursor: pointer;
   }
   #rtf-chat-close:hover { color: #333; }
-
   #rtf-chat-modal h3 {
     margin: 0 0 0.4rem;
     font-size: 1.25rem;
     color: #3d2817;
   }
-
   #rtf-chat-modal input,
   #rtf-chat-modal textarea {
     width: 100%;
@@ -221,7 +198,6 @@
     outline: none;
     border-color: #3d2817;
   }
-
   #rtf-chat-modal button[type="submit"] {
     width: 100%;
     padding: 0.8rem;
@@ -236,7 +212,10 @@
   #rtf-chat-modal button[type="submit"]:hover {
     background: #5c3d28;
   }
-
+  #rtf-chat-modal button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: wait;
+  }
   @media (max-width: 480px) {
     #rtf-chat-btn {
       bottom: 20px;
@@ -251,29 +230,63 @@
     }
   }
 </style>
-
 <script>
   (function() {
     const btn = document.getElementById('rtf-chat-btn');
     const modal = document.getElementById('rtf-chat-modal');
     const overlay = document.getElementById('rtf-chat-overlay');
     const close = document.getElementById('rtf-chat-close');
+    const form = document.getElementById('rtf-contact-form');
+    const status = document.getElementById('rtf-form-status');
+    const submitBtn = document.getElementById('rtf-submit-btn');
 
     function openChat() {
-      modal.style.display = 'block';
-      overlay.style.display = 'block';
+      if (modal) modal.style.display = 'block';
+      if (overlay) overlay.style.display = 'block';
     }
     function closeChat() {
-      modal.style.display = 'none';
-      overlay.style.display = 'none';
+      if (modal) modal.style.display = 'none';
+      if (overlay) overlay.style.display = 'none';
     }
 
-    btn.addEventListener('click', openChat);
-    close.addEventListener('click', closeChat);
-    overlay.addEventListener('click', closeChat);
+    if (btn) btn.addEventListener('click', openChat);
+    if (close) close.addEventListener('click', closeChat);
+    if (overlay) overlay.addEventListener('click', closeChat);
+
+    if (form && status) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        status.style.display = 'block';
+        status.style.color = '#3d2817';
+        status.textContent = 'Sending…';
+        if (submitBtn) submitBtn.disabled = true;
+
+        try {
+          const data = new FormData(form);
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            form.reset();
+            status.textContent = 'Thank you — your message was sent. We’ll respond shortly.';
+            status.style.color = '#3d2817';
+          } else {
+            status.textContent = 'Something went wrong. Please email drew@roundtopfold.com.';
+            status.style.color = '#8b3a2a';
+          }
+        } catch (err) {
+          status.textContent = 'Something went wrong. Please email drew@roundtopfold.com.';
+          status.style.color = '#8b3a2a';
+        }
+
+        if (submitBtn) submitBtn.disabled = false;
+      });
+    }
   })();
 </script>
-
 <script>
   (function() {
     const toggle = document.getElementById('nav-toggle');
@@ -286,7 +299,6 @@
     }
   })();
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -311,7 +323,6 @@
   "description": "An introduction to Round Top Fold — our decision to raise miniature Highland cattle in Round Top, Texas, and what this blog will share as the herd grows."
 }
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
