@@ -697,3 +697,5 @@ footer .footer-copy {
   object-fit: cover;
   aspect-ratio: 4 / 3;   /* prevents layout shift */
 }
+
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
