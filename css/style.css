@@ -698,4 +698,26 @@ footer .footer-copy {
   aspect-ratio: 4 / 3;   /* prevents layout shift */
 }
 
-grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Tighter on small screens */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .gallery-item img {
+    height: 200px;
+  }
+}
+
+/* Slightly larger cards on big screens */
+@media (min-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
