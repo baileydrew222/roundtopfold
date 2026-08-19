@@ -70,36 +70,29 @@
       );
       pointer-events: none;
     }
-    .hero-logo-overlay {
-      position: absolute;
-      left: 3.5%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 18%;
-      max-width: 160px;
-      min-width: 88px;
-      height: auto;
-      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
-      z-index: 2;
-      pointer-events: none;
-    }
-    .hero h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .hero .tagline {
-      font-size: 1.15rem;
-      color: var(--muted);
-      font-style: italic;
-      margin-bottom: 1.75rem;
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    @media (max-width: 600px) {
-      .hero {
-        padding: 1rem 0.85rem 2.25rem;
-      }
+   .hero-logo-overlay {
+  position: absolute;
+  left: 3.5%;
+  bottom: 5%;
+  top: auto;
+  transform: none;
+  width: 16%;
+  max-width: 140px;
+  min-width: 80px;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .hero-logo-overlay {
+    width: 24%;
+    min-width: 70px;
+    left: 4%;
+    bottom: 6%;
+  }
+}
       .hero-media {
         border-width: 3px;
         box-shadow:
