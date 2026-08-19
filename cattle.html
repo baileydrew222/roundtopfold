@@ -44,6 +44,7 @@
         0 10px 28px rgba(30, 18, 8, 0.35);
     }
     .story-video-wrap {
+      position: relative;
       width: 100%;
       max-width: 720px;
       margin: 1.75rem auto 0.5rem;
@@ -67,6 +68,16 @@
       object-position: center center;
       display: block;
     }
+    .video-logo-overlay {
+      position: absolute;
+      left: 3.5%;
+      bottom: 5%;
+      width: 110px;
+      height: auto;
+      opacity: 0.92;
+      pointer-events: none;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+    }
     .story-caption {
       text-align: center;
       font-size: 0.92rem;
@@ -85,6 +96,11 @@
           0 0 0 5px #4A3220,
           0 0 0 7px #2E1F14,
           0 6px 18px rgba(30, 18, 8, 0.3);
+      }
+      .video-logo-overlay {
+        width: 80px;
+        left: 4%;
+        bottom: 6%;
       }
     }
   </style>
@@ -120,18 +136,7 @@
       <h2>The Fold</h2>
       <p class="lead">We are building a foundation herd of miniature Scottish Highland cattle with a clear focus on temperament, structure, and lasting quality — perfect for those seeking mini Highland cows, highland pets, or small-farm livestock in Texas.</p>
 
-      <!-- Aged house photo -->
-      <img
-        src="images/hero-house.jpg"
-        alt="The home under construction at Round Top Fold in Round Top, Texas"
-        class="story-photo"
-        width="1200"
-        height="800"
-        loading="lazy"
-      >
-      <p class="story-caption">The house taking shape on the land — home base for Round Top Fold</p>
-
-      <!-- Pond / pasture video (Video 2) -->
+      <!-- Pond / pasture video (Video 2) with logo -->
       <div class="story-video-wrap">
         <video
           autoplay
@@ -142,6 +147,11 @@
         >
           <source src="video/hero-pond-pasture.mp4" type="video/mp4">
         </video>
+        <img
+          src="images/logo.png"
+          alt="Round Top Fold"
+          class="video-logo-overlay"
+        >
       </div>
       <p class="story-caption">Pond and open pasture — where the fold will graze</p>
 
