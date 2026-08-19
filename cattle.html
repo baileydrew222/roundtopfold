@@ -43,6 +43,30 @@
         inset 0 0 0 1px rgba(255, 235, 190, 0.25),
         0 10px 28px rgba(30, 18, 8, 0.35);
     }
+    .story-video-wrap {
+      width: 100%;
+      max-width: 720px;
+      margin: 1.75rem auto 0.5rem;
+      border-radius: 1px;
+      border: 4px solid #A67C3D;
+      box-sizing: border-box;
+      box-shadow:
+        0 0 0 3px #6B4A2A,
+        0 0 0 7px #4A3220,
+        0 0 0 10px #2E1F14,
+        inset 0 0 0 1px rgba(255, 235, 190, 0.25),
+        0 10px 28px rgba(30, 18, 8, 0.35);
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: #2E1F14;
+    }
+    .story-video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
     .story-caption {
       text-align: center;
       font-size: 0.92rem;
@@ -53,7 +77,8 @@
       padding: 0 0.5rem;
     }
     @media (max-width: 600px) {
-      .story-photo {
+      .story-photo,
+      .story-video-wrap {
         border-width: 3px;
         box-shadow:
           0 0 0 2px #6B4A2A,
@@ -90,21 +115,35 @@
     </nav>
   </div>
   </header>
-
   <main>
     <section>
       <h2>The Fold</h2>
       <p class="lead">We are building a foundation herd of miniature Scottish Highland cattle with a clear focus on temperament, structure, and lasting quality — perfect for those seeking mini Highland cows, highland pets, or small-farm livestock in Texas.</p>
 
+      <!-- Aged house photo -->
       <img
-        src="images/land-pond-11.2.25.jpg"
-        alt="Pond and pasture at Round Top Fold in Fayette County, Texas"
+        src="images/hero-house.jpg"
+        alt="The home under construction at Round Top Fold in Round Top, Texas"
         class="story-photo"
         width="1200"
         height="800"
         loading="lazy"
       >
-      <p class="story-caption">Pond and open ground on the property — home for a small fold</p>
+      <p class="story-caption">The house taking shape on the land — home base for Round Top Fold</p>
+
+      <!-- Pond / pasture video (Video 2) -->
+      <div class="story-video-wrap">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="images/hero-pond-pasture-poster.jpg"
+        >
+          <source src="video/hero-pond-pasture.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="story-caption">Pond and open pasture — where the fold will graze</p>
 
       <div class="philosophy">
         <h3>Breeding Philosophy</h3>
@@ -128,17 +167,13 @@
       <p class="story-caption">Wildlife already shares this land — we aim to keep the place in balance as the fold grows</p>
 
       <p>Round Top Fold is a member of the American Highland Cattle Association. Our official herd prefix is <strong>Pending</strong>.</p>
-
       <p>At this stage we are still establishing the herd of miniature Highland cattle in Round Top, Texas. No calves are currently available for sale. As the program develops and the first highland calves arrive, we will update this page with information on available animals.</p>
-
       <p>If you are interested in future mini Highland calves or would simply like to learn more about our breeding plans for gentle, quality Highland cattle, please reach out. We are always happy to talk with people who share an appreciation for these remarkable animals.</p>
-
       <div style="text-align: center; margin-top: 2.5rem;">
         <a href="contact.html" class="btn btn-outline">Inquire About Future Calves</a>
       </div>
     </section>
   </main>
-
   <footer>
     <div class="footer-brand">Round Top Fold</div>
     <div class="footer-address">
@@ -170,7 +205,6 @@
     </div>
   </div>
   <script src="js/main.js"></script>
-
 <button id="rtf-chat-btn" aria-label="Contact us">Contact</button>
 <div id="rtf-chat-overlay"></div>
 <div id="rtf-chat-modal">
