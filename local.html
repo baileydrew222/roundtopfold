@@ -10,7 +10,6 @@
   <title>Local Guide | Round Top Fold – Things to Do in Round Top Texas</title>
   <meta name="description" content="Local guide to Round Top, Texas — antique show dates, shops & places to visit, restaurants, and places to stay near Round Top Fold.">
   <meta name="robots" content="index, follow">
-
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://roundtopfold.com/local.html">
@@ -20,13 +19,11 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
-
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Local Guide | Things to Do in Round Top, Texas | Round Top Fold">
   <meta name="twitter:description" content="Local guide to Round Top, Texas — antique show dates, shops, restaurants, and places to stay near Round Top Fold.">
   <meta name="twitter:image" content="https://roundtopfold.com/images/og-image.jpg">
-
   <link rel="stylesheet" href="css/style.css">
   <style>
     .local-section { margin-bottom: 3.5rem; }
@@ -104,7 +101,7 @@
     <section>
       <h2>Local Guide to Round Top</h2>
       <p class="local-intro lead">
-        Round Top is more than a stop on the map — it’s a destination. Whether you’re coming for the world-famous antiques shows, a quiet weekend in the country, or to visit our miniature Highlands, here’s a practical guide to shops, restaurants, places to stay, and the big show dates.
+        Round Top is more than a stop on the map — it’s a destination. Whether you’re coming for the world-famous antiques shows, a quiet weekend in the country, or to visit our Highland cattle, here’s a practical guide to shops, restaurants, places to stay, and the big show dates.
       </p>
       <!-- ========== ANTIQUE SHOWS ========== -->
       <div class="local-section">
@@ -204,7 +201,7 @@
         </p>
       </div>
       <p style="margin-top: 2rem;">
-        Visiting Round Top during one of the shows? You’re always welcome to stop by Round Top Fold and meet the Highlands once we are established — just reach out ahead of time so we can plan to be here.
+        Visiting Round Top during one of the shows? You’re always welcome to stop by Round Top Fold and meet our Highland cattle once we are established — just reach out ahead of time so we can plan to be here.
       </p>
       <p><a href="contact.html" class="btn btn-outline">Contact Us</a></p>
     </section>
@@ -249,7 +246,7 @@
   <button id="rtf-chat-close" aria-label="Close">&times;</button>
   <h3>Get in Touch</h3>
   <p style="margin-bottom: 1.25rem; font-size: 0.95rem; color: #666;">
-    Questions about our Highlands or a visit? Send us a note.
+    Questions about our Highland cattle or a visit? Send us a note.
   </p>
   <form id="rtf-contact-form" action="https://formspree.io/f/moealakk" method="POST">
   <input type="text" name="name" placeholder="Your name" required>
@@ -372,7 +369,6 @@
     const close = document.getElementById('rtf-chat-close');
     const form = document.getElementById('rtf-contact-form');
     const status = document.getElementById('rtf-form-status');
-
     function openChat() {
       if (modal) modal.style.display = 'block';
       if (overlay) overlay.style.display = 'block';
@@ -381,18 +377,15 @@
       if (modal) modal.style.display = 'none';
       if (overlay) overlay.style.display = 'none';
     }
-
     if (btn) btn.addEventListener('click', openChat);
     if (close) close.addEventListener('click', closeChat);
     if (overlay) overlay.addEventListener('click', closeChat);
-
     if (form) {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
         status.style.display = 'block';
         status.style.color = '#3d2817';
         status.textContent = 'Sending…';
-
         try {
           const data = new FormData(form);
           const res = await fetch(form.action, {
@@ -400,7 +393,6 @@
             body: data,
             headers: { 'Accept': 'application/json' }
           });
-
           if (res.ok) {
             form.reset();
             status.textContent = 'Thank you — your message was sent. We’ll respond shortly.';
