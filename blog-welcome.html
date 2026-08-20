@@ -8,13 +8,13 @@
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/favicon-512.png">
   <title>Welcome to Round Top Fold | Blog</title>
-  <meta name="description" content="An introduction to Round Top Fold — our decision to raise miniature Highland cattle in Round Top, Texas, and what this blog will share as the herd grows.">
+  <meta name="description" content="An introduction to Round Top Fold — our decision to raise Highland cattle in Round Top, Texas, and what this blog will share as the herd grows.">
   <meta name="robots" content="index, follow">
   <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://roundtopfold.com/blog-welcome.html">
   <meta property="og:title" content="Welcome to Round Top Fold | Blog">
-  <meta property="og:description" content="An introduction to Round Top Fold — our decision to raise miniature Highland cattle in Round Top, Texas, and what this blog will share as the herd grows.">
+  <meta property="og:description" content="An introduction to Round Top Fold — our decision to raise Highland cattle in Round Top, Texas, and what this blog will share as the herd grows.">
   <meta property="og:image" content="https://roundtopfold.com/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -22,7 +22,7 @@
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Welcome to Round Top Fold | Blog">
-  <meta name="twitter:description" content="An introduction to Round Top Fold — our decision to raise miniature Highland cattle in Round Top, Texas, and what this blog will share as the herd grows.">
+  <meta name="twitter:description" content="An introduction to Round Top Fold — our decision to raise Highland cattle in Round Top, Texas, and what this blog will share as the herd grows.">
   <meta name="twitter:image" content="https://roundtopfold.com/images/og-image.jpg">
   <link rel="stylesheet" href="css/style.css">
   <style>
@@ -60,14 +60,14 @@
   <main>
     <div class="post">
       <a href="blog.html" class="back-link">← Back to Blog</a>
-     
+    
       <h2>Welcome to Round Top Fold</h2>
       <div class="post-meta">August 13, 2026</div>
       <p>We’re just getting started.</p>
-      <p>When we decided to build in Round Top, we knew we wanted cattle on the land. We also knew we needed animals that fit the season of life we’re in — something manageable, beautiful, and genuinely enjoyable to work with. That search led us to miniature Scottish Highlands.</p>
-      <p>These cattle carry the classic Highland look: the long, flowing hair, the quiet eyes, the sturdy presence. But they come in a smaller package that makes daily care more realistic. Their reputation for calm, docile temperaments sealed the decision. They felt like the right fit.</p>
-      <p>Round Top Fold is a small, intentional project. We’re aiming for a herd of roughly ten cows, using artificial insemination to bring in strong genetics, and selecting for gentle disposition and polled (naturally hornless) animals whenever we can. Quality over quantity.</p>
-      <p>This blog will be a simple record of the journey — the decisions, the learning curve, the first calves when they arrive, and life on the place. We’ll also share practical notes that might help others who are considering mini Highlands or small-scale cattle in Texas.</p>
+      <p>When we decided to build in Round Top, we knew we wanted cattle on the land. We also knew we needed animals that fit the season of life we’re in — something manageable, beautiful, and genuinely enjoyable to work with. That search led us to Highland cattle.</p>
+      <p>These cattle carry the classic look of the breed: long, flowing hair, quiet eyes, and a sturdy presence. They are hardy, people-oriented when raised with consistent handling, and a natural fit for a small fold on acreage. Traditional Highlands are horned — that is part of the breed, and we work with the cattle as they are.</p>
+      <p>Round Top Fold is a small, intentional project. We’re aiming for a herd of roughly ten cows, using artificial insemination to bring in strong genetics, and selecting first for calm disposition and sound structure. Quality over quantity. If we include miniature Highlands in the fold, those animals will be registered with the International Miniature Cattle Breeders Registry (IMCBR). Our program is grounded in membership with the American Highland Cattle Association.</p>
+      <p>This blog will be a simple record of the journey — the decisions, the learning curve, the first calves when they arrive, and life on the place. We’ll also share practical notes that might help others who are considering Highland cattle or small-scale cattle in Texas.</p>
       <p>If you’re interested in future calves, want to visit during the antique shows, or just enjoy following along, you’re welcome here. Thank you for stopping by.</p>
       <p>— Drew</p>
     </div>
@@ -91,7 +91,7 @@
       </a>
     </div>
     <div class="footer-copy">
-      &copy; 2027 Round Top Fold. Miniature Highland Cattle in Round Top, Texas.<br>
+      &copy; 2027 Round Top Fold. Highland Cattle in Round Top, Texas.<br>
       <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Disclaimers</a>
     </div>
   </footer>
@@ -112,7 +112,7 @@
   <button id="rtf-chat-close" aria-label="Close">&times;</button>
   <h3>Get in Touch</h3>
   <p style="margin-bottom: 1.25rem; font-size: 0.95rem; color: #666;">
-    Questions about our miniature Highlands or a visit? Send us a note.
+    Questions about our Highland cattle or a visit? Send us a note.
   </p>
   <form id="rtf-contact-form" action="https://formspree.io/f/moealakk" method="POST">
     <input type="text" name="name" placeholder="Your name" required>
@@ -240,7 +240,6 @@
     const form = document.getElementById('rtf-contact-form');
     const status = document.getElementById('rtf-form-status');
     const submitBtn = document.getElementById('rtf-submit-btn');
-
     function openChat() {
       if (modal) modal.style.display = 'block';
       if (overlay) overlay.style.display = 'block';
@@ -249,11 +248,9 @@
       if (modal) modal.style.display = 'none';
       if (overlay) overlay.style.display = 'none';
     }
-
     if (btn) btn.addEventListener('click', openChat);
     if (close) close.addEventListener('click', closeChat);
     if (overlay) overlay.addEventListener('click', closeChat);
-
     if (form && status) {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -261,7 +258,6 @@
         status.style.color = '#3d2817';
         status.textContent = 'Sending…';
         if (submitBtn) submitBtn.disabled = true;
-
         try {
           const data = new FormData(form);
           const res = await fetch(form.action, {
@@ -269,7 +265,6 @@
             body: data,
             headers: { 'Accept': 'application/json' }
           });
-
           if (res.ok) {
             form.reset();
             status.textContent = 'Thank you — your message was sent. We’ll respond shortly.';
@@ -282,7 +277,6 @@
           status.textContent = 'Something went wrong. Please email drew@roundtopfold.com.';
           status.style.color = '#8b3a2a';
         }
-
         if (submitBtn) submitBtn.disabled = false;
       });
     }
@@ -306,7 +300,7 @@
   "@type": "BlogPosting",
   "headline": "Welcome to Round Top Fold",
   "datePublished": "2026-08-13",
-  "dateModified": "2026-08-13",
+  "dateModified": "2026-08-20",
   "author": {
     "@type": "Person",
     "name": "Drew"
@@ -321,7 +315,7 @@
   },
   "image": "https://roundtopfold.com/images/og-image.jpg",
   "url": "https://roundtopfold.com/blog-welcome.html",
-  "description": "An introduction to Round Top Fold — our decision to raise miniature Highland cattle in Round Top, Texas, and what this blog will share as the herd grows."
+  "description": "An introduction to Round Top Fold — our decision to raise Highland cattle in Round Top, Texas, and what this blog will share as the herd grows."
 }
 </script>
 <script type="application/ld+json">
