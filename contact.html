@@ -7,23 +7,23 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/favicon-512.png">
-  <title>Contact Round Top Fold | Visit Miniature Highland Cattle in Round Top Texas</title>
-  <meta name="description" content="Contact Round Top Fold to inquire about future miniature Highland calves, arrange a visit during the Round Top Antique Shows, or learn more about our mini Highland cattle in Texas.">
-  <meta name="keywords" content="contact round top fold, visit highland cattle round top, mini highland cattle texas, buy mini highland calves, round top tx cattle">
+  <title>Contact Round Top Fold | Visit Highland Cattle in Round Top, Texas</title>
+  <meta name="description" content="Contact Round Top Fold to inquire about future Highland calves, arrange a visit during the Round Top Antique Shows, or learn more about our Highland cattle in Texas.">
+  <meta name="keywords" content="contact round top fold, visit highland cattle round top, highland cattle texas, highland calves, round top tx cattle, scottish highland cattle">
   <meta name="robots" content="index, follow">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://roundtopfold.com/contact.html">
-  <meta property="og:title" content="Contact Round Top Fold | Visit Miniature Highlands in Round Top, TX">
-  <meta property="og:description" content="Inquire about future miniature Highland calves, arrange a visit, or learn more about our mini Highlands in Round Top, Texas.">
+  <meta property="og:title" content="Contact Round Top Fold | Visit Highland Cattle in Round Top, TX">
+  <meta property="og:description" content="Inquire about future Highland calves, arrange a visit, or learn more about our Highland cattle in Round Top, Texas.">
   <meta property="og:image" content="https://roundtopfold.com/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact Round Top Fold | Visit Miniature Highlands in Round Top, TX">
-  <meta name="twitter:description" content="Inquire about future miniature Highland calves, arrange a visit, or learn more about our mini Highlands in Round Top, Texas.">
+  <meta name="twitter:title" content="Contact Round Top Fold | Visit Highland Cattle in Round Top, TX">
+  <meta name="twitter:description" content="Inquire about future Highland calves, arrange a visit, or learn more about our Highland cattle in Round Top, Texas.">
   <meta name="twitter:image" content="https://roundtopfold.com/images/og-image.jpg">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -55,7 +55,7 @@
   <main>
     <section>
       <h2>Contact Us</h2>
-      <p class="lead">We would love to hear from you — whether you are interested in future miniature Highland calves, would like to visit once we are established, or simply want to learn more about the fold.</p>
+      <p class="lead">We would love to hear from you — whether you are interested in future Highland calves, would like to visit once we are established, or simply want to learn more about the fold.</p>
       <div class="contact-grid">
         <div class="contact-info">
           <h3>Visit</h3>
@@ -68,7 +68,7 @@
             <a href="https://www.google.com/maps/search/?api=1&query=620+Farm+to+Market+rd+1291+Round+Top+TX+78954" target="_blank" rel="noopener">Google Maps</a> ·
             <a href="https://maps.apple.com/?q=620+FM+1291+Round+Top+TX+78954" target="_blank" rel="noopener">Apple Maps</a>
           </p>
-          <p style="margin-top: 0.75rem;">Visitors are welcome once we are established. Please contact us ahead of time so we can arrange to meet you and introduce you to our miniature Highland cattle.</p>
+          <p style="margin-top: 0.75rem;">Visitors are welcome once we are established. Please contact us ahead of time so we can arrange to meet you and introduce you to our Highland cattle.</p>
           <h3 style="margin-top: 2rem;">Email</h3>
           <p><a href="mailto:drew@roundtopfold.com">drew@roundtopfold.com</a></p>
           <div class="social-links">
@@ -133,7 +133,7 @@
       </a>
     </div>
     <div class="footer-copy">
-      &copy; 2027 Round Top Fold. Miniature Highland Cattle in Round Top, Texas.<br>
+      &copy; 2027 Round Top Fold. Highland Cattle in Round Top, Texas.<br>
       <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Disclaimers</a>
     </div>
   </footer>
@@ -163,14 +163,12 @@
       const status = document.getElementById('rtf-form-status');
       const submitBtn = document.getElementById('rtf-submit-btn');
       if (!form || !status) return;
-
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
         status.style.display = 'block';
         status.style.color = '#3d2817';
         status.textContent = 'Sending…';
         if (submitBtn) submitBtn.disabled = true;
-
         try {
           const data = new FormData(form);
           const res = await fetch(form.action, {
@@ -178,7 +176,6 @@
             body: data,
             headers: { 'Accept': 'application/json' }
           });
-
           if (res.ok) {
             form.reset();
             status.textContent = 'Thank you — your message was sent. We’ll respond shortly.';
@@ -191,7 +188,6 @@
           status.textContent = 'Something went wrong. Please email drew@roundtopfold.com.';
           status.style.color = '#8b3a2a';
         }
-
         if (submitBtn) submitBtn.disabled = false;
       });
     })();
@@ -202,7 +198,7 @@
     "@type": "ContactPage",
     "name": "Contact Round Top Fold",
     "url": "https://roundtopfold.com/contact.html",
-    "description": "Contact Round Top Fold to inquire about future miniature Highland calves or arrange a visit."
+    "description": "Contact Round Top Fold to inquire about future Highland calves or arrange a visit."
   }
   </script>
   <script type="application/ld+json">
