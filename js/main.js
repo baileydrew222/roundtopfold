@@ -1,23 +1,26 @@
-// Round Top Fold - Cookie Consent
 (function () {
   const banner = document.getElementById('cookie-banner');
   if (!banner) return;
 
-  // Check if user has already made a choice
   if (localStorage.getItem('rtf-cookie-consent')) {
     banner.style.display = 'none';
+    document.body.classList.remove('cookie-open');
     return;
   }
 
   banner.style.display = 'flex';
+  document.body.classList.add('cookie-open');
+
+  function closeBanner(value) {
+    localStorage.setItem('rtf-cookie-consent', value);
+    banner.style.display = 'none';
+    document.body.classList.remove('cookie-open');
+  }
 
   document.getElementById('cookie-accept')?.addEventListener('click', function () {
-    localStorage.setItem('rtf-cookie-consent', 'accepted');
-    banner.style.display = 'none';
+    closeBanner('accepted');
   });
-
   document.getElementById('cookie-decline')?.addEventListener('click', function () {
-    localStorage.setItem('rtf-cookie-consent', 'declined');
-    banner.style.display = 'none';
+    closeBanner('declined');
   });
 })();
