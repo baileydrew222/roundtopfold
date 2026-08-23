@@ -833,3 +833,7 @@ footer .footer-copy {
     z-index: 10001;
   }
 }
+
+.cookie-banner {
+  padding-right: 8.5rem;
+}
