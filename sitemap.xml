@@ -6,73 +6,63 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/about.html</loc>
+    <loc>https://roundtopfold.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/cattle.html</loc>
+    <loc>https://roundtopfold.com/cattle</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/gallery.html</loc>
+    <loc>https://roundtopfold.com/gallery</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/blog.html</loc>
+    <loc>https://roundtopfold.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/blog-welcome.html</loc>
+    <loc>https://roundtopfold.com/blog-welcome</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/blog-why-mini-highlands.html</loc>
+    <loc>https://roundtopfold.com/blog-why-mini-highlands</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/blog-responsible-breeding.html</loc>
+    <loc>https://roundtopfold.com/blog-responsible-breeding</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/blog-why-round-top.html</loc>
+    <loc>https://roundtopfold.com/blog-why-round-top</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/local.html</loc>
+    <loc>https://roundtopfold.com/blog-wildlife-practices</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roundtopfold.com/faq.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roundtopfold.com/contact.html</loc>
-    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/shop.html</loc>
+    <loc>https://roundtopfold.com/local</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/privacy.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://roundtopfold.com/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roundtopfold.com/terms.html</loc>
+    <loc>https://roundtopfold.com/contact</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>
