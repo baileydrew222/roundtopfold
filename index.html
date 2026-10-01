@@ -26,8 +26,7 @@
   <meta name="twitter:image" content="https://roundtopfold.com/images/og-image.jpg">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    html, body { overflow-x: hidden; max-width: 100%; }
-    img, video { max-width: 100%; }
+    html, body { overflow-x: hidden; }
     .hero {
       background: linear-gradient(to bottom, var(--white), var(--cream));
       text-align: center;
@@ -39,6 +38,8 @@
       width: 100%;
       max-width: 1100px;
       margin: 0 auto 1.75rem;
+      height: 0;
+      padding-bottom: 56.25%;
       border: 4px solid #A67C3D;
       box-sizing: border-box;
       box-shadow:
@@ -49,25 +50,16 @@
         0 10px 28px rgba(30, 18, 8, 0.35);
       overflow: hidden;
       background: #2a1c12;
-      aspect-ratio: 16 / 9;
-      height: auto;
-    .hero-media {
-  position: relative;
-  width: 100%;
-  max-width: 1100px;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  overflow: hidden;
-}
-.hero-media video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    }
+    .hero-media video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      display: block;
     }
     .hero-logo-overlay {
       position: absolute;
@@ -85,43 +77,34 @@
       font-size: 1.15rem;
       color: var(--muted);
       font-style: italic;
-      margin-bottom: 1.75rem;
+      margin: 0 auto 1.75rem;
       max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
     }
     @media (min-width: 901px) {
       .nav-toggle { display: none !important; }
       #main-nav {
         display: block !important;
         position: static !important;
-        background: transparent;
-        border: 0;
-        box-shadow: none;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        width: auto !important;
       }
       #main-nav ul {
         display: flex !important;
         flex-direction: row !important;
-        gap: 1.4rem;
-        padding: 0;
+        gap: 1.35rem;
+        padding: 0 !important;
+        margin: 0;
       }
-      #main-nav li { width: auto; text-align: left; }
-      #main-nav a { display: inline; padding: 0; }
+      #main-nav li { width: auto !important; }
+      #main-nav a { display: inline !important; padding: 0 !important; }
     }
     @media (max-width: 600px) {
       .hero { padding: 1rem 0.85rem 2.25rem; }
-      .hero-media {
-        border-width: 3px;
-        box-shadow:
-          0 0 0 2px #6B4A2A,
-          0 0 0 5px #4A3220,
-          0 0 0 7px #2E1F14,
-          0 6px 18px rgba(30, 18, 8, 0.3);
-        margin-bottom: 1.25rem;
-      }
       .hero-logo-overlay { width: 78px; left: 4%; bottom: 6%; }
       .hero h1 { font-size: 1.55rem; }
-      .hero .tagline { font-size: 1.02rem; margin-bottom: 1.35rem; }
+      .hero .tagline { font-size: 1.02rem; }
     }
   </style>
 </head>
@@ -243,11 +226,11 @@
     </form>
   </div>
   <style>
-    #rtf-chat-btn { position: fixed; bottom: 28px; right: 28px; z-index: 9998; background: #3d2817; color: #f8f4ee; border: none; border-radius: 50px; padding: 14px 22px; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.03em; cursor: pointer; box-shadow: 0 4px 18px rgba(61, 40, 23, 0.25); }
+    #rtf-chat-btn { position: fixed; bottom: 28px; right: 28px; z-index: 9998; background: #3d2817; color: #f8f4ee; border: none; border-radius: 50px; padding: 14px 22px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 4px 18px rgba(61, 40, 23, 0.25); }
     #rtf-chat-btn:hover { background: #5c3d28; }
     #rtf-chat-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 9999; }
     #rtf-chat-modal { display: none; position: fixed; bottom: 90px; right: 28px; width: 340px; max-width: calc(100vw - 40px); background: #fff; border-radius: 10px; padding: 1.75rem 1.5rem 1.5rem; z-index: 10000; box-shadow: 0 12px 40px rgba(0,0,0,0.18); }
-    #rtf-chat-close { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 1.5rem; line-height: 1; color: #888; cursor: pointer; }
+    #rtf-chat-close { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 1.5rem; color: #888; cursor: pointer; }
     #rtf-chat-modal h3 { margin: 0 0 0.4rem; font-size: 1.25rem; color: #3d2817; }
     #rtf-chat-modal input, #rtf-chat-modal textarea { width: 100%; padding: 0.7rem 0.85rem; margin-bottom: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 0.95rem; font-family: inherit; box-sizing: border-box; }
     #rtf-chat-modal button[type="submit"] { width: 100%; padding: 0.8rem; background: #3d2817; color: #f8f4ee; border: none; border-radius: 5px; font-size: 0.95rem; font-weight: 600; cursor: pointer; }
@@ -259,12 +242,12 @@
   <script src="js/main.js"></script>
   <script>
   (function() {
-    const btn = document.getElementById('rtf-chat-btn');
-    const modal = document.getElementById('rtf-chat-modal');
-    const overlay = document.getElementById('rtf-chat-overlay');
-    const close = document.getElementById('rtf-chat-close');
-    const form = document.getElementById('rtf-contact-form');
-    const status = document.getElementById('rtf-form-status');
+    var btn = document.getElementById('rtf-chat-btn');
+    var modal = document.getElementById('rtf-chat-modal');
+    var overlay = document.getElementById('rtf-chat-overlay');
+    var close = document.getElementById('rtf-chat-close');
+    var form = document.getElementById('rtf-contact-form');
+    var status = document.getElementById('rtf-form-status');
     function openChat() { if (modal) modal.style.display = 'block'; if (overlay) overlay.style.display = 'block'; }
     function closeChat() { if (modal) modal.style.display = 'none'; if (overlay) overlay.style.display = 'none'; }
     if (btn) btn.addEventListener('click', openChat);
@@ -277,7 +260,7 @@
         status.style.color = '#3d2817';
         status.textContent = 'Sending…';
         try {
-          const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+          var res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
           if (res.ok) { form.reset(); status.textContent = 'Thank you — your message was sent. We’ll respond shortly.'; }
           else { status.textContent = 'Something went wrong. Please email drew@roundtopfold.com.'; status.style.color = '#8b3a2a'; }
         } catch (err) {
@@ -290,8 +273,8 @@
   </script>
   <script>
     (function() {
-      const toggle = document.getElementById('nav-toggle');
-      const nav = document.getElementById('main-nav');
+      var toggle = document.getElementById('nav-toggle');
+      var nav = document.getElementById('main-nav');
       if (toggle && nav) {
         toggle.addEventListener('click', function() {
           toggle.classList.toggle('active');
@@ -308,3 +291,4 @@
   </script>
 </body>
 </html>
+
